@@ -6,10 +6,10 @@ let currentImage = 0;
 
 const renderImages = (direction) => {
 
-    // Remove "active" class from all images
+    
 
     images.forEach((image) => {
-        image.classList.remove("active");
+        image.style.display = "none"
     });
 
     // Update index
@@ -23,8 +23,8 @@ const renderImages = (direction) => {
         currentImage = images.length - 1;
     }
 
-    // Add "active" class to the current image
-    images[currentImage].classList.add("active");
+   
+    images[currentImage].style.display = "";
 };
 
 
@@ -44,3 +44,4 @@ previousButton.addEventListener("click", () => {
 
 // Initial render
 renderImages(0);
+
